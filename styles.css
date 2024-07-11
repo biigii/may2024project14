@@ -9,45 +9,82 @@ body {
   font-family: sans-serif;
 }
 
+header,
+footer,
+aside,
+main,
+section,
+article {
+  font-size: 3em;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-color: red;
+  grid-area: header;
+}
+
+footer {
+  background-color: lightblue;
+  grid-area: footer;
+}
+
+aside {
+  background-color: lightpink;
+  grid-area: aside;
+}
+
+main {
+  background-color: orange;
+  grid-area: main;
+}
+
+section {
+  background-color: lightgreen;
+  grid-area: section;
+}
+
+article {
+  background-color: lightslategrey;
+  grid-area: article;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 body {
   display: grid;
-  place-items: center;
 }
-
-figure {
-  width: 500px;
-  height: 500px;
-  border: 2px dashed;
+@media (min-width: 1700px) {
+  body {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 130px 1fr 200px;
+    grid-template-areas: "header header header header" "aside section main article" "footer footer footer footer";
+  }
 }
-
-h1 {
-  transition: color 0.5s;
+@media (min-width: 1200px) and (max-width: 1700px) {
+  body {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 120px 1fr 1fr 150px;
+    grid-template-areas: "header header header" "aside section main" "aside section article" "footer footer footer";
+  }
 }
-h1:hover {
-  color: #f11;
+@media (max-width: 1200px) and (min-width: 700px) {
+  body {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr 120px;
+    grid-template-areas: "header header" "aside main" "section article" "section article" "footer footer";
+  }
 }
-
-button {
-  cursor: pointer;
-  width: 220px;
-  height: 80px;
-  font-size: 1.7em;
-  text-transform: capitalize;
-  border: 2px solid;
-  background-color: #000;
-  color: #f78;
-  animation-name: hovered;
-  animation-duration: 100ms;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
-}
-button:hover {
-  animation-play-state: running;
-}
-@keyframes hovered {
-  to {
-    scale: 1.05;
+@media (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "header" "aside" "section" "article" "main" "footer";
   }
 }/*# sourceMappingURL=styles.css.map */
