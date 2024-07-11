@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+figure {
+  width: 500px;
+  height: 500px;
+  border: 2px dashed;
+}
+
+h1 {
+  transition: color 0.5s;
+}
+h1:hover {
+  color: #f11;
+}
+
+button {
+  cursor: pointer;
+  width: 220px;
+  height: 80px;
+  font-size: 1.7em;
+  text-transform: capitalize;
+  border: 2px solid;
+  background-color: #000;
+  color: #f78;
+  animation-name: hovered;
+  animation-duration: 100ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+button:hover {
+  animation-play-state: running;
+}
+@keyframes hovered {
+  to {
+    scale: 1.05;
+  }
+}/*# sourceMappingURL=styles.css.map */

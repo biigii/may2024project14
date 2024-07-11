@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+figure {
+  width: 500px;
+  height: 500px;
+  border: 2px dashed;
+}
+
+h1 {
+  transition: color 0.5s;
+  &:hover {
+    color: #f11;
+  }
+}
+
+button {
+    cursor: pointer;
+    width: 220px;
+    height: 80px;
+    font-size: 1.7em;
+    text-transform: capitalize;
+    border: 2px solid;
+    background-color: #000;
+    color: #f78;
+    animation-name: hovered;
+    animation-duration: 100ms;
+    // animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+
+    &:hover {
+        animation-play-state: running;
+    }
+
+    @keyframes hovered {
+        to {
+            scale: 1.05
+            // rotate: 360deg;
+        }
+    }
+}
+
+
+
+
+
+img:hover {
+  //   scale: 1.01;
+//   animation-play-state: running;
+}
+
+img {
+  //    rotate: 45deg;
+  //   transform: rotate(180deg);
+  //   scale: 2;
+  //   transform: scale(2);
+  //   transition: scale 500ms;
+  //   transition-property: scale;
+  //   transition-duration: 400ms;
+  //   translate: 100px 100px;
+  //    transform: translate(200px, 200px);
+  //    transform: skew(15deg, 10deg);
+
+//   animation-name: my-animation;
+//   animation-duration: 3s;
+//   animation-timing-function: ease-in-out;
+//   animation-iteration-count: 3;
+//   animation-direction: alternate;
+//   animation-fill-mode: forwards;
+//   animation-play-state: paused;
+
+
+}
+
+// @keyframes my-animation {
+//   to {
+//     scale: 5;
+//     rotate: 180deg;
+//     border-radius: 50%;
+//   }
+// }
